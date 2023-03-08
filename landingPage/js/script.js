@@ -2,6 +2,29 @@
 
 // They don't know me SON!!!!!!
 
+let menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
+let dispCol = document.getElementById("column-mobile");
+
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+    dispCol.style.display = "flex";
+    dispCol.classList.add('dispCol');
+
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+    dispCol.style.display = "none";
+    dispCol.classList.remove('dispCol');
+  }
+});
+
+
+
+
+
 let comingText = document.getElementById("comingText");
 let soonText = document.getElementById("soonText");
 

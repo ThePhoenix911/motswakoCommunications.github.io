@@ -21,6 +21,7 @@ div#wrapper {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 /* div#wrapper.activateFocus {
@@ -108,6 +109,67 @@ main {
     height: -webkit-fill-available;
 }
 
+/* Hamburger Icon */
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 41px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* border: 0.00801px solid #000; */
+    z-index: 6;
+    top: .7em;
+    left: .7em;
+    text-shadow: 1px 1px black;
+    /* background: #00000085; */
+    padding: 8px;
+    /* border-radius: 68px; */
+  }
+  .menu-btn__burger {
+    width: 1.3em;
+    height: 3px;
+    background: #070707;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 1.3em;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    text-shadow: 1px 1px black;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-8px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(8px);
+  }
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: #000;
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: #000;
+  }
+
+
 .content {
     position: relative;
     top: -5.6em;
@@ -118,6 +180,35 @@ main {
     height: 30%;
     background: #fff;
 }
+
+div#column-mobile {
+    width: 20em;
+    background: #ffffff80;
+    z-index: 5;
+    position: absolute;
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    top: 5.2em;
+    /* opacity: 0; */
+    -webkit-animation: opacity-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: opacity-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    /* transition: 3s ease-in; */
+    /* left: -11em; */
+}
+
+#column-mobile .content {
+    width: 100%;
+    position: relative;
+    height: 12.76em;
+}
+
+#column-mobile .content img {
+    position: relative;
+    top: 1.2em;
+}
+
 
 /* MC Company Logo */
 
@@ -218,14 +309,15 @@ a#email {
 /* Coming Soon - text */
 h1#soon {
     position: absolute;
-    top: 9.8em;
-    left: 21.6em;
+    top: 10.2em;
+    left: 4.5em;
     font-family: system-ui;
     color: yellow;
     -webkit-animation: text-focus-in 1s 30s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 1s 30s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     /* text-shadow: 0px 84px 24px rgb(0 0 0); */
     /* text-transform: capitalize; */
+    font-size: 20px;
 }
 
 
@@ -330,8 +422,9 @@ h1#soon {
     font-size: 11px;
     text-align: end;
     position: absolute;
-    bottom: 0;
+    bottom: .2em;
     width: 100%;
+    left: 25.8em;
 }
 
 .copyright p {
@@ -341,30 +434,24 @@ h1#soon {
 
 .copyright a {
     /* padding: .89em; */
+    font-size: 8px;
 }
 
-div#column {
-    display: flex;
-    background: #ffffff80;
-    height: -webkit-fill-available;
-    width: 20%;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
+
 
 h3#contact-link {
     position: absolute;
-    top: 36em;
-    left: 4.9em;
+    /* top: 36em; */
+    /* left: 4.9em; */
+    bottom: 1.4em;
+    left: 1.8em;
     text-transform: uppercase;
     z-index: 1;
     -webkit-animation: text-expand 0.8s 33s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: text-expand 0.8s 33s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     /* color: yellow; */
     text-shadow: 0 0 #000;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: 600;
   }
 
@@ -381,15 +468,6 @@ h3#contact-link a:hover {
     border: 1px solid #ddd;
 }
   
-  h3#contact-link:hover {
-    
-
-}
-
-
-    
-  
-  
 
 
 div#content-2 {
@@ -397,10 +475,12 @@ div#content-2 {
     flex-direction: column;
     position: relative;
     top: -3em;
-    font-size: .95em;
+    font-size: .75em;
     text-align: left;
     margin-left: 1.5em;
+    height: 20.5em;
 }
+
 
 div#content-2 span {
     padding: .45em;
@@ -524,11 +604,11 @@ div#missions {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: relative;
-    bottom: 7.2em;
+    position: absolute;
+    bottom: 1.1em;
     width: 100%;
-    font-size: 32px;
-    left: 4em;
+    font-size: 13px;
+    left: 0;
 }
 
 span.missionText {
@@ -600,3 +680,164 @@ div#missions span:nth-child(4) {
     stroke: black;
     stroke-width: 2;
 } */
+
+video#backVid {
+    position: absolute;
+    height: -webkit-fill-available;
+    transform: scale3d(1.5, 3.5, 0.1);
+    top: -0.8em;
+}
+
+
+
+@keyframes opacity-in {
+    from{
+        opacity: 0;
+        left: -25em;
+    }
+    to{
+        opacity: 1;
+        left: 0em;
+    }
+}
+
+@media screen and (min-width: 362px), print {
+    div#heading {
+        top: 32%;
+    }
+
+    video#backVid {
+        transform: scale3d(1.5, 2.97, 1.5);
+    }
+
+    #column-mobile .content {
+        height: 13.7em;
+    }
+
+    
+}
+
+@media screen and (min-width: 478px), print {
+    div#heading {
+        top: 32%;
+    }
+
+    #column-mobile .content {
+        height: 14.5em;
+    }
+}
+
+@media screen and (min-width: 550px), print {
+    div#heading {
+        position: relative;
+        width: 100%;
+        top: 28%;
+        text-align: center;
+    }
+
+    #column-mobile .content {
+        width: 100%;
+        position: relative;
+        height: 16.5em;
+    }
+
+    div#content-2 span {
+        line-height: 2.5em;
+    }
+}
+
+
+@media screen and (min-width: 750px) {
+    .menu-btn {
+        display: none;
+    }
+
+    div#column-mobile {
+        display: none;
+    }
+
+    div#column {
+        display: flex;
+        background: #ffffff80;
+        height: -webkit-fill-available;
+        width: 20%;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: 5;
+        font-size: 10px;
+    }
+
+    .content {
+        top: -8.4em;
+    }
+
+    div#content-2 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -4em;
+        font-size: .95em;
+        text-align: left;
+        margin-left: 1.5em;
+    }
+
+    h3#contact-link {
+        position: relative;
+        left: -1.1em;
+        bottom: -4em;
+    }
+}
+
+@media screen and (min-width: 910px), print {
+
+    div#column {
+    }
+
+    .content {
+        top: -9.1em;
+    }
+
+    div#content-2 {
+        top: -4em;
+        font-size: 1.1em;
+    }
+
+    h3#contact-link {
+        bottom: -3em;
+    }
+}
+
+@media screen and (min-width: 1010px), print {
+    div#column {
+        width: 25%;
+    }
+
+    .content {
+        top: -7.1em;
+    }
+
+    div#content-2 {
+        top: -1em;
+        font-size: 1.4em;
+    }
+
+    h3#contact-link {
+        bottom: -3em;
+        font-size: 1.4em;
+        left: 0;
+    }
+
+    div#missions {
+        bottom: -0.9em;
+        font-size: 16px;
+        left: 8em;
+    }
+}
+
+main {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
+}

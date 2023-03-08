@@ -1,0 +1,171 @@
+/* UNIVERSAL STYLE */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: green;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+img, video {
+    max-width: 100%;
+    display: block;
+    min-width: inherit;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+video#backVid {
+    position: absolute;
+    height: -webkit-fill-available;
+    transform: scale3d(4em, 1);
+    top: -0.8em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0;
+    height: 100vh;
+    background: #ffffff80;
+}
+
+
+    
+.logo-container {
+    grid-area: 1 / 1 / 3 / 3;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 5;
+}
+
+.content {
+    grid-area: 3 / 1 / 7 / 3;
+    background: #ffffff80;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 2em 1em;
+    line-height: 2.5em;
+    text-align: left;
+    font-size: .9em;
+    width: max-content;
+    z-index: 5;
+}
+
+.content > span {
+    margin: .24em;
+    width: max-content;
+}
+
+.contactUs {
+    grid-area: 7 / 1 / 8 / 3;
+    background: #ffffff80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+h3#contact-link {
+    width: max-content;
+    height: max-content;
+    text-transform: uppercase;
+    -webkit-animation: text-expand 0.8s 33s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 33s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    text-shadow: 0 0 #000;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+h3#contact-link a {
+    padding: 0.4em;
+    border-radius: 36px;
+    background: yellow;
+    color: #768282;
+}
+
+.missions {
+    grid-area: 7 / 5 / 8 / 6;
+    /* background: pink; */
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    z-index: 5;
+}
+
+span.missionText {
+    padding: 1em;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+span.separator {
+    padding: .7em;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: yellow;
+}
+
+.comingSoon {
+    grid-area: 3 / 4 / 4 / 7;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 5;
+    padding-bottom: .5em;
+}
+
+h1#soon {
+    font-family: system-ui;
+    color: yellow;
+    font-size: 20px;
+    -webkit-animation: text-focus-in 1s 30s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s 30s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 664px), print {
+    .container {
+        display: none;
+    }
+
+    .container-mt {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 910px), print {
+    .content {
+        width: inherit;
+    }
+
+    video#backVid {
+        position: absolute;
+        height: -webkit-fill-available;
+        /* transform: scale3d(1, 1, 1); */
+        top: -8em;
+        left: 0.6em;
+    }
+
+    
+}
