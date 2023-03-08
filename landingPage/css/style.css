@@ -135,6 +135,7 @@ main {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
+    background: darkgrey;
   }
   .menu-btn__burger::before,
   .menu-btn__burger::after {
@@ -147,6 +148,7 @@ main {
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
     text-shadow: 1px 1px black;
+    background: darkgray;
   }
   .menu-btn__burger::before {
     transform: translateY(-8px);
@@ -188,7 +190,7 @@ div#column-mobile {
     z-index: 5;
     position: absolute;
     color: #fff;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     top: 0.1em;
@@ -456,6 +458,7 @@ h3#contact-link {
     text-shadow: 0 0 #000;
     font-size: .8em;
     font-weight: 600;
+    display: none;
   }
 
 h3#contact-link a {
@@ -477,7 +480,7 @@ div#content-2 {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: -3em;
+    top: 0;
     font-size: .75em;
     text-align: left;
     margin-left: 2.5em;
@@ -613,6 +616,7 @@ div#missions {
     width: 100%;
     font-size: 13px;
     left: 0;
+    z-index: 5;
 }
 
 span.missionText {
@@ -847,4 +851,6 @@ div#heading {
     justify-content: center;
     align-items: center;
     top: 12em;
+    z-index: 5;
+    padding: 3em;
 }
