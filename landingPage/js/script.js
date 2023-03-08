@@ -10,14 +10,14 @@ menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
     menuOpen = true;
-    dispCol.style.display = "flex";
-    dispCol.classList.add('dispCol');
+    // dispCol.style.display = "flex";
+    // dispCol.classList.add('dispCol');
 
   } else {
     menuBtn.classList.remove('open');
     menuOpen = false;
-    dispCol.style.display = "none";
-    dispCol.classList.remove('dispCol');
+    // dispCol.style.display = "none";
+    // dispCol.classList.remove('dispCol');
   }
 });
 
