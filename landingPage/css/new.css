@@ -7,7 +7,6 @@
 }
 
 body {
-    /* background: green; */
     height: 100vh;
     width: 100vw;
 }
@@ -119,7 +118,7 @@ h3#contact-link a:hover {
 
 span.missionText {
     padding: 1em;
-    color: #fff;
+    color: #000;
     text-transform: capitalize;
 }
 
@@ -127,7 +126,7 @@ span.separator {
     padding: .7em;
     font-weight: bolder;
     font-size: 1.1em;
-    color: yellow;
+    color: #b30d0c;
 }
 
 .comingSoon {
@@ -142,7 +141,7 @@ span.separator {
 
 h1#soon {
     font-family: system-ui;
-    color: yellow;
+    color: orange;
     font-size: 20px;
     -webkit-animation: text-focus-in 1s 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 1s 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -160,8 +159,13 @@ h1#soon {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: aqua;
         height: 100vh;
+        /* top: -10em; */
+        /* position: relative; */
+    }
+
+    video#backVid {
+        display: none;
     }
 
 }
@@ -190,15 +194,16 @@ h1#soon {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 9em;
+    height: 27em;
     position: relative;
-    top: -1.4em;
+    /* top: -3.4em; */
+    /* background: aqua; */
 }
 
 img#logo-mt {
     position: relative;
     height: inherit;
-    padding-top: 2em;
+    padding-top: 11em;
 }
 
 .comingSoon-mt h1#comingSoon-mt {
@@ -213,27 +218,34 @@ img#logo-mt {
 }
 
 .comingSoon-mt {
-    padding: .7em;
+    /* padding: 1em; */
+    background: #ffffffb0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 .content-mt {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #ffffffb0;
     width: 100%;
-    padding: 1em 2em 1em;
+    padding: 1em 1em 1em;
     line-height: 1em;
     color: #000;
     font-size: .88em;
     position: relative;
-    bottom: -1em;
+    /* align-items: center; */
+    /* text-align: left; */
+    margin-top: 1em;
 }
 
 div.content-mt span {
-    /* padding: .45em; */
-    line-height: 1em;
+    line-height: 2.3em;
     text-transform: capitalize;
+    margin-left: 4.5em;
 }
 
 div.content-mt span:nth-child(1) {
@@ -287,7 +299,7 @@ div.content-mt span:nth-child(6) {
     font-size: .88em;
     justify-content: center;
     position: relative;
-    bottom: -3em;
+    bottom: -1em;
 }
 
 .contactUs-mt {
@@ -296,7 +308,7 @@ div.content-mt span:nth-child(6) {
     align-items: center;
     padding: .3em .5em 0.6em;
     position: relative;
-    bottom: -3em;
+    bottom: -1em;
 }
 
 .logo-container-mt, .comingSoon-mt, .content-mt, .missions-mt, .contactUs-mt {
@@ -307,6 +319,5 @@ video#backVid {
     position: absolute;
     height: -webkit-fill-available;
     transform: scale3d(1, 3, 1);
-    /* top: 0.2em; */
-    /* overflow: hidden; */
+    /* top: 0.2em; */    
 }
