@@ -183,25 +183,28 @@ main {
 
 div#column-mobile {
     width: 20em;
-    background: #ffffff80;
+    /* background: #ffffff80; */
+    background: #000000cf;
     z-index: 5;
     position: absolute;
     color: #fff;
     display: none;
     flex-direction: column;
     justify-content: center;
-    top: 5.2em;
+    top: 0.1em;
     /* opacity: 0; */
     -webkit-animation: opacity-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: opacity-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     /* transition: 3s ease-in; */
     /* left: -11em; */
+    height: 100vh;
+    width: 100vw;
 }
 
 #column-mobile .content {
     width: 100%;
     position: relative;
-    height: 12.76em;
+    height: 14.76em;
 }
 
 #column-mobile .content img {
@@ -308,13 +311,13 @@ a#email {
 
 /* Coming Soon - text */
 h1#soon {
-    position: absolute;
+    /* position: absolute; */
     top: 10.2em;
     left: 4.5em;
     font-family: system-ui;
     color: yellow;
-    -webkit-animation: text-focus-in 1s 30s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    animation: text-focus-in 1s 30s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-focus-in 1s 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     /* text-shadow: 0px 84px 24px rgb(0 0 0); */
     /* text-transform: capitalize; */
     font-size: 20px;
@@ -443,12 +446,12 @@ h3#contact-link {
     position: absolute;
     /* top: 36em; */
     /* left: 4.9em; */
-    bottom: 1.4em;
-    left: 1.8em;
+    bottom: 3.4em;
+    left: 2.8em;
     text-transform: uppercase;
     z-index: 1;
-    -webkit-animation: text-expand 0.8s 33s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.8s 33s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     /* color: yellow; */
     text-shadow: 0 0 #000;
     font-size: .8em;
@@ -477,45 +480,46 @@ div#content-2 {
     top: -3em;
     font-size: .75em;
     text-align: left;
-    margin-left: 1.5em;
+    margin-left: 2.5em;
     height: 20.5em;
+    /* left: 8em; */
 }
 
 
 div#content-2 span {
     padding: .45em;
-    line-height: 2em;
+    line-height: 2.5em;
     text-transform: capitalize;
 }
 
 div#content-2 span:nth-child(1) {
-    -webkit-animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+    -webkit-animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
 }
 
 div#content-2 span:nth-child(2) {
-    -webkit-animation: text-expand 0.8s 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.8s 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 div#content-2 span:nth-child(3) {
-    -webkit-animation: text-expand 0.8s 9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.8s 9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 div#content-2 span:nth-child(4) {
-    -webkit-animation: text-expand 0.8s 12s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.8s 12s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 div#content-2 span:nth-child(5) {
-    -webkit-animation: text-expand 0.8s 15s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.8s 15s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 div#content-2 span:nth-child(6) {
-    -webkit-animation: text-expand 0.8s 18s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.8s 18s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 #content-2 > span:nth-child(1) > i, span:nth-child(4) > i {
@@ -620,18 +624,18 @@ span.missionText {
 }
 
 div#missions span:nth-child(1) {
-    -webkit-animation: text-expand 0.7s 21s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.7s 21s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 div#missions span:nth-child(3) {
-    -webkit-animation: text-expand 0.7s 24s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.7s 24s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 div#missions span:nth-child(5) {
-    -webkit-animation: text-expand 0.7s 27s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.7s 27s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 
@@ -651,13 +655,13 @@ span.separator {
 }
 
 div#missions span:nth-child(2) {
-    -webkit-animation: text-expand 0.7s 24s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.7s 24s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 div#missions span:nth-child(4) {
-    -webkit-animation: text-expand 0.7s 27s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: text-expand 0.7s 27s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 
@@ -836,3 +840,11 @@ video#backVid {
     }
 }
 
+div#heading {
+    position: relative;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 12em;
+}
