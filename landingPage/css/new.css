@@ -6,11 +6,9 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
+#wrapper {
+    background-image: url('../media/sunrise_water_compressed.gif');
 }
-
 
 img, video {
     max-width: 100%;
@@ -31,7 +29,7 @@ a {
 video#backVid {
     position: absolute;
     height: -webkit-fill-available;
-    transform: scale3d(4em, 1);
+    transform: scale3d(1.5, 3.75, 0.1);
     top: -0.8em;
 }
 
@@ -118,8 +116,9 @@ h3#contact-link a:hover {
 
 span.missionText {
     padding: 1em;
-    color: #000;
+    /* color: #000; */
     text-transform: capitalize;
+    color: #fff;
 }
 
 span.separator {
@@ -141,7 +140,7 @@ span.separator {
 
 h1#soon {
     font-family: system-ui;
-    color: orange;
+    color: yellow;
     font-size: 20px;
     -webkit-animation: text-focus-in 1s 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 1s 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -155,18 +154,21 @@ h1#soon {
     }
 
     .container-mt {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items: center; */
         height: 100vh;
         /* top: -10em; */
-        /* position: relative; */
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 3fr 1fr 1fr;
+        /* background: aqua; */
     }
 
-    video#backVid {
+    /* video#backVid {
         display: none;
-    }
+    } */
 
 }
 
@@ -186,6 +188,15 @@ h1#soon {
     
 }
 
+@media screen and (max-height: 620px), print {
+    .logo-container-mt {
+        height: 19em;
+    }
+}
+
+
+
+
 
 /* Test Phase */
 .logo-container-mt {
@@ -194,16 +205,18 @@ h1#soon {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 27em;
+    /* height: 99%; */
     position: relative;
-    /* top: -3.4em; */
+    top: 0;
     /* background: aqua; */
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 img#logo-mt {
     position: relative;
-    height: inherit;
-    padding-top: 11em;
+    /* padding-top: 1em; */
+    height: calc(100% - 25%);
+    /* display: none; */
 }
 
 .comingSoon-mt h1#comingSoon-mt {
@@ -219,11 +232,15 @@ img#logo-mt {
 
 .comingSoon-mt {
     /* padding: 1em; */
-    background: #ffffffb0;
+    /* background: #ffffffb0; */
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    /* margin-top: 1em; */
+    grid-area: 2 / 1 / 3 / 2;
+    /* background: black; */
+    align-items: center;
+    /* height: 3em; */
 }
 
 .content-mt {
@@ -239,7 +256,10 @@ img#logo-mt {
     position: relative;
     /* align-items: center; */
     /* text-align: left; */
-    margin-top: 1em;
+    /* margin-top: 1em; */
+    grid-area: 3 / 1 / 4 / 2;
+    /* background: darkorange; */
+    /* height: 96%; */
 }
 
 div.content-mt span {
@@ -296,28 +316,28 @@ div.content-mt span:nth-child(6) {
     width: 100%;
     display: flex;
     flex-direction: row;
-    font-size: .88em;
+    font-size: .95em;
     justify-content: center;
     position: relative;
-    bottom: -1em;
+    /* bottom: -1em; */
+    grid-area: 4 / 1 / 5 / 2;
+    /* background: brown; */
+    align-items: center;
+    /* height: 3.5em; */
 }
 
 .contactUs-mt {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .3em .5em 0.6em;
+    /* padding: .3em .5em 0.6em; */
     position: relative;
-    bottom: -1em;
+    /* bottom: -1em; */
+    grid-area: 5 / 1 / 6 / 2;
+    /* background: black; */
 }
 
 .logo-container-mt, .comingSoon-mt, .content-mt, .missions-mt, .contactUs-mt {
     z-index: 1;
 }
 
-video#backVid {
-    position: absolute;
-    height: -webkit-fill-available;
-    transform: scale3d(1, 3, 1);
-    /* top: 0.2em; */    
-}
