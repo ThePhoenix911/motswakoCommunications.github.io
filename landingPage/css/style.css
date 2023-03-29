@@ -427,7 +427,8 @@ p {
 #contact .contact-info h2 {
 	font-size: 1.15rem;
 	line-height: 2rem;
-	font-weight: 900;
+	word-wrap: break-word;
+	font-weight: 100;
 }
 /*End contact Section */
 
@@ -593,7 +594,6 @@ p {
 		width: 30%;
 		margin: 0;
 		flex-direction: row;
-		justify-content: space-between;
 	}
 	#contact .contact-item .icon {
 		/* height: 100px; */
@@ -659,11 +659,9 @@ img#logo {
 }
 
 a#email {
-    font-weight: 900;
 }
 
 a#phone {
-    font-weight: 900;
 }
 
 span.separator {
