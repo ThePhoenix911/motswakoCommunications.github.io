@@ -665,3 +665,8 @@ a#email {
 a#phone {
     font-weight: 900;
 }
+
+span.separator {
+    color: #a80000;
+    font-weight: 900;
+}
