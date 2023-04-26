@@ -1,0 +1,366 @@
+/* UNIVERSAL STYLE */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY, CONTAINER, IMAGE, AND VIDEO */
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: system-ui !important;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+div#wrapper {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("../images/pexels-alena-darmel-7710053.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* div#wrapper.activateFocus {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+} */
+
+img, video {
+    max-width: 100%;
+    display: block;
+    min-width: inherit;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active {
+    color: #5050ee;
+}
+
+
+header {
+    grid-row: 1;
+    height: 9em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #fff;
+}
+
+main {
+    grid-row: 2;
+    padding: 0.3em;
+    color: #fff;
+    background: rgba(0, 0, 0, .65);
+    max-height: calc(100% - 31%);
+}
+
+footer {
+    /* background: green; */
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Image Logo */
+img#logo {
+    height: 70%;
+    position: relative;
+    top: 1em;
+    left: 1em;
+}
+
+
+/* MAIN CONTENT */
+/* First div */
+div#content-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: .9em;
+    text-align: left;
+    padding: 1em 0 0 .8em;
+}
+
+div#content-2 span {
+    padding: .45em;
+    line-height: 2.15em;
+    text-transform: capitalize;
+}
+
+div#content-2 span:nth-child(1) {
+    -webkit-animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+}
+
+div#content-2 span:nth-child(2) {
+    -webkit-animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#content-2 span:nth-child(3) {
+    -webkit-animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#content-2 span:nth-child(4) {
+    -webkit-animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#content-2 span:nth-child(5) {
+    -webkit-animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#content-2 span:nth-child(6) {
+    -webkit-animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#content-2 > span:nth-child(1) > i, span:nth-child(4) > i {
+    color: yellow;
+}
+
+#content-2 > span:nth-child(2) > i, span:nth-child(5) > i {
+    color: orange;
+}
+
+#content-2 > span:nth-child(3) > i, span:nth-child(6) > i {
+    color: maroon;
+}
+
+
+/* Heading Positioned at the bottom */
+div#heading {
+    padding: 1em;
+}
+
+    /* "Coming soon" - text */
+h1#soon {
+    font-family: system-ui;
+    color: yellow;
+    -webkit-animation: text-focus-in 1s 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    font-size: 24px;
+    text-align: center;
+}
+
+    /* "Website under construction" - text */
+h3#construction {
+    color: #8080809e;
+}
+
+
+/* FOOTER */
+/* Contact Us and additional details Positioned at the bottom */
+
+h3#contact-link {
+    position: relative;
+    text-transform: uppercase;
+    -webkit-animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.8s 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    text-shadow: 0 0 #000;
+    font-size: 1em;
+    font-weight: 600;
+    top: 0.5em;
+    text-align: left;
+    padding-left: .8em;
+  }
+
+h3#contact-link a {
+    padding: 0.4em;
+    border-radius: 36px;
+    background: yellow;
+    color: #768282;
+}
+
+h3#contact-link a:hover {
+    background: orange;
+    transition: 1s;
+    border: 1px solid #ddd;
+}
+
+/* Separator */
+span.separator {
+    padding: .7em;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: yellow;
+}
+
+#contact-link > span.separator {
+    color: #Fff;
+    position: relative;
+    left: .5em;
+    display: none;
+}
+
+
+/* Companies Operational Missions */
+
+
+div#missions {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+}
+
+span.missionText {
+    padding: 1em;
+    color: #fff;
+    /* text-shadow: 2px 12px 10px #000; */
+    text-transform: capitalize;
+    /* font-size: 32px; */
+}
+
+div#missions span:nth-child(1) {
+    -webkit-animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#missions span:nth-child(3) {
+    -webkit-animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#missions span:nth-child(5) {
+    -webkit-animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#missions span:nth-child(2) {
+    -webkit-animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+div#missions span:nth-child(4) {
+    -webkit-animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-expand 0.7s 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+
+
+
+/* Contact Us Box that displays after click */
+div#contact-us {
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    background: rgb(0 0 0 / 59%);
+    box-shadow: rgb(0 0 0 / 25%) 0px 32px 50px -12px;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    padding: 0.3em;
+}
+
+
+div#contact-us > p {
+    padding: .4em;
+    display: flex;
+}
+
+div#contact-us > p > a {
+    margin-left: 1em;
+    font-size: .89em;
+}
+
+div#contact-us > p > i {
+    padding: 0.5em;
+    border-radius: 2em;
+    border: 1px solid #e9a810;
+    font-size: 16px;
+}
+
+div#contact-us p:nth-child(4) i {
+    font-size: 16px;
+    width: 34px;
+    height: 34px;
+    position: relative;
+    padding: 10px;
+}
+
+div#contact-us > p > i:hover {
+    border-color: red;
+}
+
+div#contact-us p:nth-child(3) i {width: 34px;height: 34px;}
+
+div#contact-us p > a {
+    text-transform: initial;
+}
+
+a > img {
+    width: 2em;
+}
+
+a#phone {
+    grid-column: 1 / span 2;
+}
+
+a#email {
+    grid-column: 1 / span 2;
+}
+
+
+#contact-us h3 {
+    margin-bottom: 1em;
+}
+
+.closeX {
+    height: max-content;
+    width: max-content;
+    border-radius: 5px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 5s;
+    font-size: 2.5em;
+    right: 0.2em;
+}
+
+.closeX::after {
+    content: "\d7";
+    font-size: 1.4em;
+}
+
+.closeX:hover {
+    color: #ff0000;
+}
+
+.closeX:active {
+    color: #ac0000;
+}
+
+@media screen and (min-width: 550px) {
+    div#content-2 {
+        text-align: center;
+    }
+   
+}
