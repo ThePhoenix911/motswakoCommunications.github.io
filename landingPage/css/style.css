@@ -24,6 +24,7 @@ div#wrapper {
     position: relative;
     background-image: url("../images/pexels-alena-darmel-7710053.jpg");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
