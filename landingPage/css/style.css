@@ -342,12 +342,16 @@ a#email {
     width: max-content;
     border-radius: 5px;
     position: absolute;
-    color: #000;
+    color: #d90505;
     cursor: pointer;
     transition: opacity 5s;
     font-size: 2.1em;
     right: .5em;
     top: -0.3em;
+}
+
+a.closeX:focus-visible {
+    height: 0;
 }
 
 .closeX::after {
@@ -378,9 +382,10 @@ a#email {
 
 .fa-whatsapp:before {
     position: relative;
-    left: 7.99px;
-    top: 5.7px;
-    font-size: 19px;
+    left: 7.2px;
+    top: 6.7px;
+    font-size: 20px;
+    color: #25D366;
 }
 
 .fa-location-dot:before, .fa-map-marker-alt:before {
