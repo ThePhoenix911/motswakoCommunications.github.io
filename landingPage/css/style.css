@@ -171,7 +171,9 @@ h1#soon {
 
     /* "Website under construction" - text */
 h3#construction {
-    color: #8080809e;
+    /* color: #8080809e; */
+    color: yellow;
+    padding: .4em;
 }
 
 
@@ -314,6 +316,14 @@ div#contact-us > p > i:hover {
     border-color: red;
 }
 
+div#contact-us > p > a:hover {
+    color: red;
+}
+
+div#contact-us > p > a:active {
+    color: darkred;
+}
+
 div#contact-us p:nth-child(3) i {width: 34px;height: 34px;position: relative;}
 
 div#contact-us p > a {
@@ -395,10 +405,18 @@ a.closeX:focus-visible {
     top: 8px;
 }
 
+.fa.fa-facebook:before {
+    position: relative;
+    top: .5em;
+    left: .7em;
+}
+
 @media screen and (min-width: 550px) {
     div#content-2 {
         text-align: center;
     }
    
 }
+
+
 
