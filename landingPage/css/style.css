@@ -264,7 +264,7 @@ div#missions {
     position: relative;
     bottom: 0;
     width: 100%;
-    font-size: 16px;
+    font-size: 13px;
     text-align: center;
 }
 
@@ -467,12 +467,16 @@ a.closeX:focus-visible {
         left: 6em;
     }
 
-.heading {
-    grid-column: 2;
-    position: relative;
-    /* top: 14.5em; */
-    /* left: 1em; */
-}
+    .heading {
+        grid-column: 2;
+        position: relative;
+        /* top: 14.5em; */
+        /* left: 1em; */
+    }
+
+    div#missions {
+        font-size: 15px;
+    }
    
 }
 
@@ -523,10 +527,17 @@ a.closeX:focus-visible {
         left: 6.1em;
     }
 
-    div#content-2 {display: grid;grid-template-columns: repeat(2, 1fr);/* height: calc(100% - 51%); */}
+    div#content-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* height: calc(100% - 51%); */}
 
     div#content-2 span {
         font-size: 1.2em;
+    }
+
+    div#missions {
+        font-size: 16px;
     }
 
 }
