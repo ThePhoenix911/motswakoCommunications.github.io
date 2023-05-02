@@ -198,7 +198,7 @@ h3.construction {
     color: yellow;
     padding: .4em;
     text-transform: capitalize !important;
-    left: -4.3em;
+    left: 0.7em;
     position: relative;
     width: max-content;
     font-size: 1em;
@@ -525,7 +525,8 @@ a.closeX:focus-visible {
         grid-column: 1;
         margin-left: 5.25em;
         width: max-content;
-        left: 0;
+        position: relative;
+        left: -4.5em !important;
     }
 
     .contact-link.tb-desk {
