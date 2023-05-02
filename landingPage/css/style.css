@@ -71,7 +71,7 @@ header {
 
 main {
     grid-row: 2;
-    /* padding: 0.3em; */
+    padding: 0.3em;
     color: #fff;
     background: rgba(0, 0, 0, .65);
     max-height: max-content;
@@ -96,7 +96,7 @@ footer {
 img#logo {
     height: 80%;
     position: relative;
-    left: 4em;
+    left: 4.5em;
     transform: scale(1);
     top: .3em;
 }
@@ -122,10 +122,10 @@ div#content-2 {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-size: .9em;
+    font-size: 1em;
     text-align: left;
     padding: 2em 0 0 .8em;
-    left: 5.5em;
+    left: .7em;
 }
 
 div#content-2 span {
@@ -180,7 +180,7 @@ div#content-2 span:nth-child(6) {
 /* Heading Positioned at the bottom */
 div.heading {
     padding: 1em;
-    height: 7em;
+    height: max-content;
 }
 
     /* "Coming soon" - text */
@@ -198,7 +198,7 @@ h3.construction {
     color: yellow;
     padding: .4em;
     text-transform: capitalize !important;
-    left: 4.7em;
+    left: -4.3em;
     position: relative;
     width: max-content;
     font-size: 1em;
@@ -219,9 +219,8 @@ h3.contact-link {
     font-weight: 600;
     top: 1em;
     text-align: left;
-    left: 5em;
-    /* padding-left: .8em; */
-    padding-top: 1em;
+    left: 1em;
+    padding: 1em 0;
   }
 
 h3.contact-link.tb-desk {
@@ -311,8 +310,7 @@ div#contact-us {
     position: relative;
     -webkit-backdrop-filter: blur(10px);
     /* backdrop-filter: blur(10px); */
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 12px;
+    /* border-radius: 12px; */
     /* background: rgb(0 0 0 / 59%); */
     box-shadow: rgb(0 0 0 / 25%) 0px 32px 50px -12px;
     color: #fff;
@@ -329,6 +327,9 @@ div#contact-us > p {
     justify-content: left;
     align-items: center;
     margin-top: 1rem;
+    position: relative;
+    left: .7em;
+    letter-spacing: .2px;
 }
 
 div#contact-us > p:last-child {
@@ -345,10 +346,11 @@ div#contact-us > p > a {
 div#contact-us > p > i {
     /* padding: 0.5em; */
     border-radius: 2em;
-    border: 1px solid #fff;
+    border: 1px solid #ddd;
     font-size: 16px;
     height: 34px;
     width: 34px;
+    background: aliceblue;
 }
 
 
@@ -424,12 +426,14 @@ a.closeX:focus-visible {
     position: relative;
     left: 8px;
     top: 8px;
+    color: deepskyblue;
 }
 
 .fa-envelope:before {
     position: relative;
     top: 8px;
     left: 9px;
+    color: orange;
 }
 
 .fa-whatsapp:before {
@@ -445,6 +449,7 @@ a.closeX:focus-visible {
     position: relative;
     left: 10.5px;
     top: 8px;
+    color: red;
 }
 
 .fa.fa-facebook:before {
@@ -463,8 +468,8 @@ a.closeX:focus-visible {
 @media screen and (min-width: 550px) {
     div#content-2 {
         /* text-align: center; */
-        position: relative;
-        left: 6em;
+        /* position: relative; */
+        /* left: 6em; */
     }
 
     .heading {
@@ -486,7 +491,8 @@ a.closeX:focus-visible {
         left: 7.9px;
         top: 6.7px;
         font-size: 20px;
-        color: #2dff7c;
+        /* color: #2dff7c; */
+        color: #00ff39;
     }
 
     main {
@@ -500,12 +506,6 @@ a.closeX:focus-visible {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .contact-link {
-        /* position: absolute !important; */
-        /* left: 50em; */
-        /* top: 20.5em !important; */
     }
 
     h3.contact-link.mobile {
@@ -525,14 +525,15 @@ a.closeX:focus-visible {
         grid-column: 1;
         margin-left: 5.25em;
         width: max-content;
-        left: 0 !important;
+        left: 0;
     }
 
     .contact-link.tb-desk {
         grid-column: 2;
         /* margin-left: 5.4em; */
         display: block !important;
-        left: 6.1em;
+        left: 2.1em;
+        top: 0;
     }
 
     div#content-2 {
@@ -544,18 +545,23 @@ a.closeX:focus-visible {
         font-size: 1.2em;
     }
 
+    div#contact-us p {
+        font-size: 1.2em;
+    }
+    
+
     div#missions {
         font-size: 16px;
     }
 
 }
 
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 891px) {
     div#contact-us {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        width: 100vw;
+        width: 100%;
     }
 
     div#contact-us > p:nth-child(1) {
