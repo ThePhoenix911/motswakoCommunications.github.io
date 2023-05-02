@@ -480,7 +480,7 @@ a.closeX:focus-visible {
     }
 
     div#missions {
-        font-size: 15px;
+        font-size: 17px;
     }
    
 }
@@ -552,7 +552,8 @@ a.closeX:focus-visible {
     
 
     div#missions {
-        font-size: 16px;
+        font-size: 19.2px;
+        padding: .5em;
     }
 
 }
